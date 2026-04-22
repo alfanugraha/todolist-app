@@ -1,0 +1,41 @@
+/* style.css — Neobrutalism utilities */
+
+/* Hard shadow helpers */
+.neo-shadow    { box-shadow: 4px 4px 0px #000; }
+.neo-shadow-sm { box-shadow: 3px 3px 0px #000; }
+
+/* Button press effect */
+button:not(:disabled):active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000 !important;
+}
+
+/* Minimal transitions */
+button {
+  transition: background-color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
+}
+
+#task-list li span {
+  transition: color 0.1s ease;
+}
+
+/* Thin scrollbar on task list */
+#task-list {
+  max-height: 60vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+#task-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+#task-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 2px;
+}
